@@ -1,0 +1,10 @@
+{
+  "name": "hofmann",
+  "version": "1.0.0",
+  "devDependencies": {
+      "grunt-autoprefixer": "^3.0.4",
+      "grunt-cli": "^1.2.0",
+      "grunt-contrib-watch": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0"
+  }
+}
