@@ -1,0 +1,18 @@
+.svg-container {
+    transform: rotate( -90deg ) rotateX( 180deg );
+    transform-origin: center center;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+svg {
+    margin: 0;
+}
+.path {
+    stroke-dashoffset: 616;
+    stroke-dasharray: 616;
+    transition: all 2s $ease-out-bounce;
+    stroke: $gold;
+    stroke-width: 4px;
+    fill: none;
+}

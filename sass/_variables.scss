@@ -5,9 +5,16 @@ $darker-gray: #4B4B4B;
 $dark-gray: #7D7D7D;
 $light-gray: #E6E6E6;
 $lighter-gray: #F6F6F6;
+$black: #000;
+$white: #fff;
 
 $text: $darker-gray;
 
 // Fonts
 $headline: 'Montserrat', sans-serif;
 $sans: 'Source Sans Pro', sans-serif;
+
+// Cubic bezier easing speeds
+$ease-in-expo: cubic-bezier(0.950, 0.050, 0.795, 0.035);
+$ease-out-expo: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+$ease-out-bounce: cubic-bezier(0.435, 1.565, 0.810, 0.875);

@@ -74,3 +74,14 @@ h4 {
         line-height: 24px;
     }
 }
+
+.section__title {
+    text-align: center;
+}
+.section__subtitle {
+    text-align: center;
+    font-family: $sans;
+    font-size: 11px;
+    letter-spacing: 0px;
+    line-height: 16px;
+}
