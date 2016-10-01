@@ -1,92 +1,4 @@
 $( document ).ready( function(){
-    function animateCircle(){
-        $( '.stat-container' ).each( function( idx ){
-            var $this, circle, radius, circleLength, circlePct, dashOffset;
-            $this = $( this );
-            circle = $this.find( '.path' );
-            radius = circle.attr("r");
-            circleLength = 2 * Math.PI * radius;
-            circlePct = $this.find( '.stat' ).text().split( ',' )[0];
-            dashOffset = ( 100 - circlePct ) / 100 * circleLength;
-            setTimeout( function(){
-                circle.attr( 'style', 'stroke-dashoffset: ' + dashOffset );
-            }, 500 * idx );
-        });
-    }
-
-    animateCircle();
-
-    function triggerNumbers( el ){
-    	el.find( '.count-up').each(function(){
-    		var $container = $(this).parent();
-    		var endNumber = $(this).text();
-
-    		$( this ).text( '' );
-
-    		//Check for %
-    		if(endNumber.indexOf('%') > -1){
-    			endNumber = endNumber.replace('%','');
-    			$container.append('%');
-    		}
-
-    		//Check for $
-    		if(endNumber.indexOf('$') > -1){
-    			endNumber = endNumber.replace('$','');
-    			$container.prepend('$');
-    		}
-
-    		// Use comma only if there is a comma already in the number
-    		var needsComma = ( endNumber.indexOf( ',' ) > -1 ? ',' : '' );
-    		endNumber = endNumber.replace(/\,/g,''); //remove commas
-
-    		// Allow trailing letters and + character
-    		var endLetter = endNumber.match( /\d+\.?\d+|[a-zA-Z]|\+/g );
-    		if( endLetter ){
-    			if( endLetter[1] ){
-    				endNumber = endLetter[0];
-    				$container.append( endLetter[1] );
-    			}
-    		}
-
-    		//Determine decimal length
-    		var decimal = endNumber.split('.');
-    		if(decimal[1]){
-    			decimal = decimal[1].length;
-    		}else{
-    			decimal = 0;
-    		}
-
-    		var options = {
-    			useEasing : true,
-    			useGrouping : true,
-    			separator : needsComma,
-    			decimal : '.',
-    			prefix : '',
-    			suffix : ''
-    		};
-    		var count = new CountUp($(this).attr('id'), endNumber*0.25, endNumber, decimal, 3, options);
-    		count.start();
-    	});
-    }
-
-
-    function statCounter(){
-    	$( '.inview-trigger' ).on( 'inview', function( event, isInView, visiblePartX, visiblePartY ){
-    		if( isInView ){
-                $( '.stat' ).each( function( idx ){
-                    var $this = $( this );
-                    setTimeout( function(){
-                        if( ! $this.hasClass( 'counted' ) ){
-                            triggerNumbers( $this );
-                            $this.addClass( 'counted' );
-                        }
-                    }, ( 2000 / 3 ) * ( idx  ) );
-                });
-    		}
-    	});
-    }
-    statCounter();
-
     $( '.slider--client' ).bxSlider({
         mode: 'horizontal',
         controls: true,
@@ -96,8 +8,114 @@ $( document ).ready( function(){
         pause: 6000,
         touchEnabled: false,
     });
+    animateCircle();
+    statCounter();
+    labelView();
 });
 
+function animateCircle(){
+    $( '.stat-container' ).each( function( idx ){
+        var $this, circle, radius, circleLength, circlePct, dashOffset;
+        $this = $( this );
+        circle = $this.find( '.path' );
+        radius = circle.attr("r");
+        circleLength = 2 * Math.PI * radius;
+        circlePct = $this.find( '.stat' ).text().split( ',' )[0];
+        dashOffset = ( 100 - circlePct ) / 100 * circleLength;
+        setTimeout( function(){
+            circle.attr( 'style', 'stroke-dashoffset: ' + dashOffset );
+        }, 500 * idx );
+    });
+}
+
+function triggerNumbers( el ){
+    el.find( '.count-up').each(function(){
+        var $container = $(this).parent();
+        var endNumber = $(this).text();
+
+        $( this ).text( '' );
+
+        //Check for %
+        if(endNumber.indexOf('%') > -1){
+            endNumber = endNumber.replace('%','');
+            $container.append('%');
+        }
+
+        //Check for $
+        if(endNumber.indexOf('$') > -1){
+            endNumber = endNumber.replace('$','');
+            $container.prepend('$');
+        }
+
+        // Use comma only if there is a comma already in the number
+        var needsComma = ( endNumber.indexOf( ',' ) > -1 ? ',' : '' );
+        endNumber = endNumber.replace(/\,/g,''); //remove commas
+
+        // Allow trailing letters and + character
+        var endLetter = endNumber.match( /\d+\.?\d+|[a-zA-Z]|\+/g );
+        if( endLetter ){
+            if( endLetter[1] ){
+                endNumber = endLetter[0];
+                $container.append( endLetter[1] );
+            }
+        }
+
+        //Determine decimal length
+        var decimal = endNumber.split('.');
+        if(decimal[1]){
+            decimal = decimal[1].length;
+        }else{
+            decimal = 0;
+        }
+
+        var options = {
+            useEasing : true,
+            useGrouping : true,
+            separator : needsComma,
+            decimal : '.',
+            prefix : '',
+            suffix : ''
+        };
+        var count = new CountUp($(this).attr('id'), endNumber*0.25, endNumber, decimal, 3, options);
+        count.start();
+    });
+}
+
+function statCounter(){
+    $( '.inview-trigger' ).on( 'inview', function( event, isInView, visiblePartX, visiblePartY ){
+        if( isInView ){
+            $( '.stat' ).each( function( idx ){
+                var $this = $( this );
+                setTimeout( function(){
+                    if( ! $this.hasClass( 'counted' ) ){
+                        triggerNumbers( $this );
+                        $this.addClass( 'counted' );
+                    }
+                }, ( 2000 / 3 ) * ( idx  ) );
+            });
+        }
+    });
+}
+
+function labelView() {
+    var formInput, formSelect;
+    formInput = $( '.input-wrapper' ).find( $( 'input, textarea' ) );
+    //formSelect = $( '.form-line' ).find( 'select' );
+    function getLabel(){
+        return $( event.currentTarget ).closest( '.input-wrapper' ).find( 'label' );
+    }
+    $( formInput ).keypress( function(){
+        getLabel().addClass( 'small-display' );
+    });
+    $( formInput ).keyup( function(){
+        if( $( event.currentTarget )[0].value === '' ){
+            getLabel().removeClass( 'small-display' );
+        }
+    });
+    $( formSelect ).change( function(){
+        getLabel().addClass( 'small-display' );
+    });
+}
 
 
 
