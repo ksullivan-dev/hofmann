@@ -1,17 +1,55 @@
+var siteWidth;
+var respSlider;
+var slideWidth;
+var doubleOptions = {
+    controls: false,
+    auto: true,
+    pause: 8000,
+    minSlides: 2,
+    maxSlides: 2,
+    slideWidth: slideWidth,
+    slideMargin: 20,
+};
+
+var singleOptions = {
+    controls: false,
+    auto: true,
+    pause: 6000,
+};
+
 $( document ).ready( function(){
     $( '.slider--client' ).bxSlider({
-        mode: 'horizontal',
-        controls: true,
-        pager: true,
         auto: true,
-        autoStart: true,
         pause: 6000,
-        touchEnabled: false,
+        autoHover: true
     });
+
+    getDimensions();
+    respSlider = $( '.slider--people' ).bxSlider( siteWidth < 500 ? singleOptions : doubleOptions );
+
     animateCircle();
     statCounter();
     labelView();
 });
+
+$( window ).on( 'resize orientationchange', function() {
+    getDimensions();
+    responsiveSlider();
+});
+
+function getDimensions(){
+    var widthAvailable = $( '.layout__people-slider' ).find( '.width-container' ).width();
+    siteWidth = $( 'body' ).width();
+    slideWidth = ( widthAvailable - 80 ) / 2;
+    doubleOptions.slideWidth = slideWidth;
+}
+
+function responsiveSlider(){
+    var currentSlide = respSlider.getCurrentSlide();
+    doubleOptions.startSlide = currentSlide;
+    singleOptions.startSlide = currentSlide;
+    respSlider.reloadSlider( siteWidth < 500 ? singleOptions : doubleOptions );
+}
 
 function animateCircle(){
     $( '.stat-container' ).each( function( idx ){
