@@ -50,6 +50,9 @@
     font-size: 11px;
     color: $white;
     line-height: 1em;
+    &:hover {
+        color: $dark-gold;
+    }
 }
 
 .layout__client-slider {

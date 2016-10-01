@@ -1,0 +1,21 @@
+%btn {
+    border-radius: 50px;
+    display: inline-block;
+    padding: 10px 35px;
+    font-family: $headline;
+    font-size: 11px;
+    line-height: 1em;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.btn--white {
+    @extend %btn;
+    border: 2px solid $dark-gray;
+    color: $dark-gray;
+    &:hover {
+        background: $gold;
+        border-color: $gold;
+    }
+}
