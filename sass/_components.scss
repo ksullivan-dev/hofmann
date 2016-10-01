@@ -1,3 +1,4 @@
+// Buttons
 %btn {
     border-radius: 50px;
     display: inline-block;
@@ -9,13 +10,105 @@
     text-transform: uppercase;
     text-decoration: none;
     transition: all 0.3s;
+    cursor: pointer;
+    border: 2px solid $darker-gray;
+    outline: 0;
 }
 .btn--white {
     @extend %btn;
-    border: 2px solid $dark-gray;
-    color: $dark-gray;
+    color: $darker-gray;
     &:hover {
         background: $gold;
         border-color: $gold;
+    }
+}
+.btn--gray {
+    @extend %btn;
+    color: $white;
+    background: $darker-gray;
+    &:hover {
+        background: $dark-gray;
+        border-color: $dark-gray;
+    }
+}
+
+// Input label text
+.input-wrapper {
+    position: relative;
+    font-size: 11px;
+    line-height: 14px;
+    label {
+        position: absolute;
+        top: 50%;
+        left: 14px;
+        transform: translate( 0, -50% );
+        transition: all 0.3s;
+    }
+    .small-display {
+        font-size: 8px;
+        line-height: 1em;
+        top: 2px;
+        transform: none;
+    }
+}
+
+// Form inputs
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"],
+textarea,
+select {
+    box-shadow: none;
+    box-sizing: border-box;
+    background: $white;
+    border: 0;
+    display: block;
+    margin: 0;
+    padding: 12px 14px;
+    width: 100%;
+    border-radius: 4px;
+    &:focus {
+        outline: none;
+    }
+}
+
+select {
+    appearance: none;
+    user-select: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+
+// Select Arrow
+.select-wrapper {
+     position:relative;
+     background: $white;
+     width: 100%;
+     select {
+         margin: 0;
+         padding-right: 40px;
+     }
+     select::-ms-expand {
+        display: none;
+    }
+     &:before {
+         content: "\f107";
+         font-family: $font-awesome;
+         color: $dark-gray;
+         background: lighten( $dark-gray, 50% );
+         font-size: 24px;
+         right: 0;
+         top: 0;
+         position: absolute;
+         pointer-events: none;
+         z-index: 0;
+         line-height: 66px;
+         width: 40px;
+         text-align: center;
     }
 }
