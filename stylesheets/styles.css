@@ -126,6 +126,9 @@ h4 {
 .section__title {
   text-align: center; }
 
+.section__title--light {
+  color: #fff; }
+
 .section__subtitle {
   text-align: center;
   font-family: "Source Sans Pro", sans-serif;
@@ -293,3 +296,22 @@ img {
   font-size: 11px;
   letter-spacing: 0px;
   line-height: 16px; }
+
+.layout__client-slider {
+  background: url("../images/clientbackground.png"); }
+
+.client-slide__text {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  padding-top: 56px;
+  position: relative; }
+  .client-slide__text:before {
+    font-family: "Montserrat", sans-serif;
+    font-size: 64px;
+    color: #EBCB80;
+    letter-spacing: 0px;
+    content: open-quote open-quote;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); }

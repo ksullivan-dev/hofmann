@@ -1,0 +1,20 @@
+.layout__client-slider {
+    background: url( '../images/clientbackground.png' );
+}
+
+.client-slide__text {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+    padding-top: 56px;
+    position: relative;
+    &:before {
+        font-family: $headline;
+        font-size: 64px;
+        color: $gold;
+        letter-spacing: 0px;
+        content: open-quote open-quote;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate( -50%, 0 );
+    }
+}

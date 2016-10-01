@@ -78,6 +78,9 @@ h4 {
 .section__title {
     text-align: center;
 }
+.section__title--light {
+    color: $white;
+}
 .section__subtitle {
     text-align: center;
     font-family: $sans;
