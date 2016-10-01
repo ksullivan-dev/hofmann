@@ -1,20 +1,59 @@
 .layout__client-slider {
     background: url( '../images/clientbackground.png' );
 }
-
-.client-slide__text {
-    quotes: "\201C" "\201D" "\2018" "\2019";
-    padding-top: 56px;
+.slide--client {
+    padding-top: 46px;
     position: relative;
+    quotes: "\201C" "\201D" "\201C" "\201D";
     &:before {
         font-family: $headline;
         font-size: 64px;
         color: $gold;
         letter-spacing: 0px;
-        content: open-quote open-quote;
+        content: open-quote;
         position: absolute;
         left: 50%;
-        top: 0;
+        top: -10px;
         transform: translate( -50%, 0 );
+    }
+}
+.client-slide__text {
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0px;
+    line-height: 16px;
+}
+
+.client {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1em;
+}
+.client__image {
+    flex: 0 0 auto;
+    margin-right: 15px;
+}
+.client__content {
+    flex: 0 0 auto;
+}
+.client__name {
+    font-family: $sans;
+    font-size: 12px;
+    color: $gold;
+    letter-spacing: 0px;
+    line-height: 1em;
+    margin: 0;
+}
+.client__link {
+    font-size: 11px;
+    color: $white;
+    line-height: 1em;
+}
+
+.layout__client-slider {
+    .bx-controls {
+        display: none;
     }
 }

@@ -87,7 +87,7 @@ $( document ).ready( function(){
     }
     statCounter();
 
-    $('.slider--client').bxSlider({
+    $( '.slider--client' ).bxSlider({
         mode: 'horizontal',
         controls: true,
         pager: true,
