@@ -1,12 +1,21 @@
+.stats {
+    margin-top: 36px;
+}
+.stat-container {
+    width: 140px;
+    margin: 28px auto 0;
+    text-align: center;
+}
+// SVG circle with animation
 .svg-container {
     transform: rotate( -90deg ) rotateX( 180deg );
     transform-origin: center center;
-    width: 300px;
-    height: 300px;
+    width: 110px;
+    height: 110px;
     margin: 0 auto;
-}
-svg {
-    margin: 0;
+    border: 1px solid $light-gray;
+    border-radius: 50%;
+    overflow: hidden;
 }
 .path {
     stroke-dashoffset: 616;
@@ -15,4 +24,37 @@ svg {
     stroke: $gold;
     stroke-width: 4px;
     fill: none;
+}
+// Stat
+.stat__circle {
+    position: relative;
+}
+.stat {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    font-family: $headline;
+    line-height: 22.39px;
+}
+.stat__large-text {
+    font-size: 32px;
+    letter-spacing: -0.81px;
+}
+.stat__small-text {
+    font-size: 16px;
+    letter-spacing: -0.4px;
+}
+// Stat text
+.stat__title {
+    font-family: $sans;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+    line-height: 16px;
+}
+.stat__text {
+    font-family: $sans;
+    font-size: 11px;
+    letter-spacing: 0px;
+    line-height: 16px;
 }

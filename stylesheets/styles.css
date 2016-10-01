@@ -145,7 +145,7 @@ body {
     padding: 0 20px; }
 
 section {
-  padding: 40px 0; }
+  padding: 28px 0; }
 
 img {
   max-width: 100%;
@@ -233,17 +233,25 @@ img {
   .download__link:first-child {
     margin-right: 8px; }
 
+.stats {
+  margin-top: 36px; }
+
+.stat-container {
+  width: 140px;
+  margin: 28px auto 0;
+  text-align: center; }
+
 .svg-container {
   -webkit-transform: rotate(-90deg) rotateX(180deg);
           transform: rotate(-90deg) rotateX(180deg);
   -webkit-transform-origin: center center;
           transform-origin: center center;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto; }
-
-svg {
-  margin: 0; }
+  width: 110px;
+  height: 110px;
+  margin: 0 auto;
+  border: 1px solid #E6E6E6;
+  border-radius: 50%;
+  overflow: hidden; }
 
 .path {
   stroke-dashoffset: 616;
@@ -253,3 +261,35 @@ svg {
   stroke: #EBCB80;
   stroke-width: 4px;
   fill: none; }
+
+.stat__circle {
+  position: relative; }
+
+.stat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+  line-height: 22.39px; }
+
+.stat__large-text {
+  font-size: 32px;
+  letter-spacing: -0.81px; }
+
+.stat__small-text {
+  font-size: 16px;
+  letter-spacing: -0.4px; }
+
+.stat__title {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  line-height: 16px; }
+
+.stat__text {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0px;
+  line-height: 16px; }
