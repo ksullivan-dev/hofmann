@@ -20,6 +20,7 @@ var singleOptions = {
 
 $( document ).ready( function(){
     $( '.slider--client' ).bxSlider({
+        pager: false,
         auto: true,
         pause: 6000,
         autoHover: true
@@ -28,15 +29,39 @@ $( document ).ready( function(){
     getDimensions();
     respSlider = $( '.slider--people' ).bxSlider( siteWidth < 500 ? singleOptions : doubleOptions );
 
-    animateCircle();
-    statCounter();
+    //animateCircle();
+    //statCounter();
     labelView();
+    searchToggle();
 });
 
 $( window ).on( 'resize orientationchange', function() {
     getDimensions();
     responsiveSlider();
 });
+
+function searchToggle(){
+    $( '.js-search__toggle' ).click( function( e ){
+        $( e.currentTarget ).closest( '.search-container' ).find( '.search__input' ).toggleClass( 'active' ).focus();
+    });
+    $( '.search__input' ).keyup( function( e ){
+        var $this = $( e.currentTarget );
+        var searchToggle = $( '.js-search__toggle' );
+        if( $this.val() !== '' ){
+            searchToggle.addClass( 'hidden' );
+            if( e.keyCode === 13 ) {
+                alert( "The search doesn't really work." );
+            }
+        } else {
+            searchToggle.removeClass( 'hidden' );
+        }
+    });
+    $( '.search__button' ).click( function( e ){
+        if( $( '.search__input' ).val() !== '' ){
+            alert( "The search doesn't really work" );
+        }
+    });
+}
 
 function getDimensions(){
     var widthAvailable = $( '.layout__people-slider' ).find( '.width-container' ).width();
