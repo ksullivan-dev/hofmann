@@ -5,7 +5,9 @@
 }
 .slider--people {
     display: flex;
-    margin-left: 8px;
+    @media screen and ( max-width: 500px ) {
+        margin-left: 7px;
+    }
 }
 .slide--people {
     padding: 8px 8px 32px;
@@ -43,6 +45,7 @@
     font-size: 18px;
     color: $gold;
     letter-spacing: 0px;
+    font-weight: bold;
 }
 .people-slide__title {
     font-size: 12px;
@@ -50,12 +53,38 @@
     letter-spacing: 0px;
     line-height: 30px;
 }
+.people-slide__link {
+    font-weight: bold;
+}
 .people-slide__image {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translate( -50%, 0 );
     width: 64px;
+}
+
+@media screen and ( min-width: 501px ){
+    .slide--people {
+        &:nth-child( odd ) {
+            .slide--inner {
+                background: $gold;
+                &:before {
+                    color: $darker-gray;
+                }
+            }
+            .people-slide__text,
+            .people-slide__name,
+            .people-slide__title {
+                color: $darker-gray;
+            }
+        }
+        .people-slide__image {
+            left: auto;
+            right: 48px;
+            transform: none;
+        }
+    }
 }
 
 // Layout specific bx overrides
