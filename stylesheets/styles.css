@@ -859,6 +859,14 @@ select {
 
 .contact__details {
   margin-top: 32px; }
+  @media screen and (min-width: 650px) {
+    .contact__details {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
 
 .contact__detail {
   color: #fff;
@@ -866,6 +874,14 @@ select {
   width: 290px;
   margin: 0 auto;
   box-sizing: border-box; }
+  @media screen and (min-width: 650px) {
+    .contact__detail {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto;
+      width: auto;
+      margin: 0;
+      padding: 0 30px; } }
 
 .contact__link {
   font-size: 10.75px;

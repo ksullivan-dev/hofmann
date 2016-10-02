@@ -43,6 +43,10 @@
 }
 .contact__details {
     margin-top: 32px;
+    @media screen and ( min-width: 650px ) {
+        display: flex;
+        justify-content: center;
+    }
 }
 .contact__detail {
     color: $white;
@@ -50,6 +54,12 @@
     width: 290px;
     margin: 0 auto;
     box-sizing: border-box;
+    @media screen and ( min-width: 650px ) {
+        flex: 0 0 auto;
+        width: auto;
+        margin: 0;
+        padding: 0 30px;
+    }
 }
 .contact__link {
     font-size: 10.75px;
