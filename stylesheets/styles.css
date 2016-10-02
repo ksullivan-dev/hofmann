@@ -324,6 +324,9 @@ select {
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%); }
 
+.hidden-text {
+  display: none; }
+
 .layout__header {
   background-image: url("../images/landingbackground.png");
   background-size: auto 100%;
@@ -736,3 +739,88 @@ input.signup__input {
 
 .contact__link--phone:before {
   background-image: url("../images/phone.png"); }
+
+.layout__footer {
+  background: #4B4B4B; }
+
+.footer-nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -15px; }
+
+.footer-nav {
+  color: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 15px; }
+
+.footer-nav__title {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 0.8px;
+  border-bottom: 1px solid #7D7D7D;
+  text-transform: uppercase; }
+
+.footer-nav__item {
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 0px;
+  line-height: 12.8px;
+  margin-bottom: 11px; }
+
+.footer__bottom {
+  border-top: 1px solid #7D7D7D;
+  margin-top: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 23px 0 28px; }
+
+.social__item {
+  padding: 0 10px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  font-size: 20px;
+  color: #EBCB80; }
+
+.social-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1; }
+
+.copyright-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 11px;
+  color: #fff;
+  letter-spacing: 0px;
+  line-height: 12.8px;
+  text-align: center;
+  margin-bottom: 10px; }
