@@ -8,13 +8,14 @@ var doubleOptions = {
     minSlides: 2,
     maxSlides: 2,
     slideWidth: slideWidth,
-    slideMargin: 20,
+    slideMargin: 20
 };
 
 var singleOptions = {
     controls: false,
     auto: true,
     pause: 6000,
+    slideMargin: 20
 };
 
 $( document ).ready( function(){
@@ -40,7 +41,7 @@ $( window ).on( 'resize orientationchange', function() {
 function getDimensions(){
     var widthAvailable = $( '.layout__people-slider' ).find( '.width-container' ).width();
     siteWidth = $( 'body' ).width();
-    slideWidth = ( widthAvailable - 80 ) / 2;
+    slideWidth = widthAvailable / 2;
     doubleOptions.slideWidth = slideWidth;
 }
 

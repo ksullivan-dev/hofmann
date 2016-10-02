@@ -529,3 +529,84 @@ input.signup__input {
 
 .signup__button {
   width: 100%; }
+
+.slider--people {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 8px; }
+
+.slide--people {
+  padding: 8px 8px 32px; }
+
+.slide--inner {
+  background: #4B4B4B;
+  padding: 20px 20px 60px;
+  height: 100%;
+  box-sizing: border-box;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  background-image: -webkit-linear-gradient(227deg, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+  background-image: linear-gradient(223deg, transparent 0%, rgba(0, 0, 0, 0.4) 100%); }
+
+.people-slide__text {
+  font-size: 11px;
+  color: #F6F6F6;
+  letter-spacing: 0px;
+  line-height: 16px; }
+
+.people-slide__name {
+  font-size: 18px;
+  color: #EBCB80;
+  letter-spacing: 0px; }
+
+.people-slide__title {
+  font-size: 12px;
+  color: #F6F6F6;
+  letter-spacing: 0px;
+  line-height: 30px; }
+
+.people-slide__image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 64px; }
+
+.layout__people-slider .bx-wrapper {
+  position: relative;
+  top: 10px; }
+.layout__people-slider .bx-pager {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+.layout__people-slider .bx-pager-item {
+  margin: 10px; }
+.layout__people-slider .bx-pager-link {
+  text-indent: 120%;
+  overflow: hidden;
+  display: block;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  border: 2px solid #4B4B4B;
+  background: #fff; }
+  .layout__people-slider .bx-pager-link.active {
+    background: #4B4B4B; }
+  .layout__people-slider .bx-pager-link:not(.active):hover {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15); }
+
+.section__title--large-screen {
+  display: none; }
+
+@media screen and (min-width: 800px) {
+  .section__title--large-screen {
+    display: block; }
+
+  .section__title--small-screen {
+    display: none; } }

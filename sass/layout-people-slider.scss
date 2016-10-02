@@ -1,2 +1,87 @@
+.slider--people {
+    display: flex;
+    margin-left: 8px;
+}
 .slide--people {
+    padding: 8px 8px 32px;
+}
+.slide--inner {
+    background: $darker-gray;
+    padding: 20px 20px 60px;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.50);
+    border-radius: 8px;
+    background-image: linear-gradient(223deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.40) 100%);
+}
+.people-slide__text {
+    font-size: 11px;
+    color: $lighter-gray;
+    letter-spacing: 0px;
+    line-height: 16px;
+}
+.people-slide__name {
+    font-size: 18px;
+    color: $gold;
+    letter-spacing: 0px;
+}
+.people-slide__title {
+    font-size: 12px;
+    color: $lighter-gray;
+    letter-spacing: 0px;
+    line-height: 30px;
+}
+.people-slide__image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate( -50%, 0 );
+    width: 64px;
+}
+
+// Layout specific bx overrides
+.layout__people-slider {
+    .bx-viewport {
+        //padding: 0 8px;
+        //margin: 0 -8px;
+    }
+    .bx-wrapper {
+        position: relative;
+        top: 10px;
+    }
+    .bx-pager {
+        display: flex;
+        justify-content: center;
+    }
+    .bx-pager-item {
+        margin: 10px;
+    }
+    .bx-pager-link {
+        text-indent: 120%;
+        overflow: hidden;
+        display: block;
+        height: 4px;
+        width: 4px;
+        border-radius: 50%;
+        border: 2px solid $darker-gray;
+        background: $white;
+        &.active {
+            background: $darker-gray;
+        }
+        &:not( .active ):hover {
+            transform: scale( 1.15 );
+        }
+    }
+}
+
+.section__title--large-screen {
+    display: none;
+}
+@media screen and ( min-width: 800px ) {
+    .section__title--large-screen {
+        display: block;
+    }
+    .section__title--small-screen {
+        display: none;
+    }
 }
