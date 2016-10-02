@@ -149,7 +149,7 @@ body {
   box-sizing: border-box;
   margin: 0 auto; }
   .width-container.half-padding {
-    padding: 0 20px; }
+    padding: 0 15px; }
 
 section {
   padding: 28px 0; }
@@ -590,6 +590,9 @@ input.signup__input {
 .signup__button {
   width: 100%; }
 
+.layout__people-slider .width-container {
+  padding: 0 25px; }
+
 .slider--people {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -601,19 +604,33 @@ input.signup__input {
 
 .slide--inner {
   background: #4B4B4B;
-  padding: 20px 20px 60px;
+  padding: 92px 27px 60px;
   height: 100%;
   box-sizing: border-box;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   background-image: -webkit-linear-gradient(227deg, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
-  background-image: linear-gradient(223deg, transparent 0%, rgba(0, 0, 0, 0.4) 100%); }
+  background-image: linear-gradient(223deg, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+  position: relative;
+  quotes: "\201C" "\201D" "\201C" "\201D"; }
+  .slide--inner:before {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 64px;
+    color: #F6F6F6;
+    letter-spacing: 0px;
+    content: open-quote;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); }
 
 .people-slide__text {
   font-size: 11px;
   color: #F6F6F6;
   letter-spacing: 0px;
-  line-height: 16px; }
+  line-height: 16px;
+  margin-bottom: 26px; }
 
 .people-slide__name {
   font-size: 18px;
@@ -684,7 +701,10 @@ input.signup__input {
   background: #4B4B4B;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
-  padding: 35px; }
+  padding: 35px;
+  width: 290px;
+  box-sizing: border-box;
+  margin: 0 auto; }
   .contact__form .input-wrapper {
     margin-bottom: 24px; }
   .contact__form .contact__input {
@@ -709,7 +729,11 @@ input.signup__input {
   margin-top: 32px; }
 
 .contact__detail {
-  color: #fff; }
+  color: #fff;
+  padding: 0 15px;
+  width: 290px;
+  margin: 0 auto;
+  box-sizing: border-box; }
 
 .contact__link {
   font-size: 10.75px;
