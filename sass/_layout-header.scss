@@ -3,18 +3,122 @@
     background-size: auto 100%;
     background-position: center;
     padding-bottom: 30px;
-    @media screen and ( min-width: 650px) {
+    @media screen and ( min-width: 650px) and ( max-width: 900px ) {
         padding-top: 70px;
         .width-container {
             padding: 0 86px;
         }
     }
+    @media screen and ( min-width: 901px ) {
+        padding: 26px 0 60px;
+    }
 }
 
 .header__top {
     display: none;
-    @media screen and ( min-width: 801px ) {
+    @media screen and ( min-width: 901px ) {
+        display: flex;
+        align-items: center;
+    }
+}
+@media screen and ( min-width: 901px ) {
+    .logo-container {
+        margin-right: auto;
+        flex: 0 0 auto;
+    }
+    .nav-container,
+    .search-container,
+    .select-container {
+        flex: 0 0 auto;
+        margin-right: 0;
+    }
+    .logo {
+        width: 36px;
+        height: 27px;
+        text-indent: 120%;
+        overflow: hidden;
+        background: url( '../images/hofmann.png' ) no-repeat;
+    }
+    .nav__list {
+        display: flex;
+    }
+    .nav__item {
+        display: 0 0 auto;
+        margin: 0 19px;
+        color: $white;
+        font-weight: bold;
+        font-size: 18px;
+        &:hover {
+            color: $gold;
+        }
+    }
+    .search-container {
+        margin-left: 50px;
+        display: flex;
+        position: relative;
+        .search__button {
+            background: none;
+            border: none;
+            outline: none;
+            color: $white;
+            font-size: 18px;
+            position: relative;
+            cursor: pointer;
+            &:hover {
+                color: $gold;
+            }
+        }
+        .search__input {
+                background: transparentize( $darker-gray, 0.4 );
+                opacity: 0;
+                transition: all 0.3s;
+                border-radius: 20px;
+                width: 0;
+                padding: 5px 0;
+                position: absolute;
+                top: 120%;
+                right: 0;
+                color: $white;
+                font-size: 14px;
+            &.active {
+                opacity: 1;
+                width: 190px;
+                padding: 5px 14px;
+            }
+        }
+    }
+    .search__button__text {
+        display: none;
+    }
+    .js-search__toggle {
         display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        &.hidden {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+    .select-container {
+        margin-left: 29px;
+        .location__select {
+            padding: 5px 20px 5px 14px;
+            border: 2px solid $white;
+            color: $white;
+            border-radius: 20px;
+        }
+        &:hover {
+            .location__select {
+                border-color: $gold;
+                color: $gold;
+            }
+        }
+        .select-wrapper:hover:before {
+            border-top-color: $gold;
+        }
     }
 }
 .header__bottom {
@@ -23,13 +127,25 @@
         box-sizing: border-box;
         position: relative;
     }
+    @media screen and ( min-width: 901px ) {
+        margin: 0 100px;
+        padding-right: 35%
+    }
 }
+
 .tagline {
     color: $white;
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 0.53px;
-    text-shadow: 0px 2px 2px transparentize( $black, 0.5 );
+    text-shadow: 0px 2px 2px rgba(0,0,0,0.50);
+    @media screen and ( min-width: 901px ) {
+        font-size: 18px;
+        color: #FFFFFF;
+        letter-spacing: 1px;
+        text-shadow: 0px 4px 4px rgba(0,0,0,0.50);
+        margin: 68px 0 148px;
+    }
 }
 .hero__content {
     @media screen and ( min-width: 501px ) {
@@ -42,18 +158,33 @@
     color: $gold;
     letter-spacing: 1px;
     text-transform: uppercase;
+    @media screen and ( min-width: 901px ) {
+        font-size: 64px;
+        letter-spacing: 2px;
+    }
 }
 .hero__subtitle {
     font-family: $sans;
     font-size: 12px;
     color: $white;
     letter-spacing: 0.37px;
+    @media screen and ( min-width: 901px ) {
+        font-size: 24px;
+        letter-spacing: 0px;
+        line-height: 36px;
+        margin-top: 30px;
+    }
 }
 .hero__text {
     font-size: 11px;
     color: $white;
     letter-spacing: 0px;
     line-height: 16px;
+    @media screen and ( min-width: 901px ) {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 100px;
+    }
 }
 .hero__image {
     height: 0;
@@ -80,17 +211,27 @@
     @media screen and ( min-width: 650px ) {
         right: 20px;
     }
+    @media screen and ( min-width: 901px ) {
+        bottom: -60px;
+    }
 }
 .download-container {
     display: flex;
     justify-content: center;
     width: 60%; // 143/240
     margin: 0 auto;
+    @media screen and ( min-width: 901px ) {
+        width: 100%;
+        justify-content: flex-start;
+    }
 }
 .download__link {
     flex: 0 1 auto;
     text-align: center;
     &:first-child {
         margin-right: 8px;
+        @media screen and ( min-width: 901px ) {
+            margin-right: 30px;
+        }
     }
 }
