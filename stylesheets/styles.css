@@ -332,30 +332,23 @@ select {
   background-size: auto 100%;
   background-position: center;
   padding-bottom: 30px; }
+  @media screen and (min-width: 650px) {
+    .layout__header {
+      padding-top: 70px; }
+      .layout__header .width-container {
+        padding: 0 86px; } }
 
-.logo-container {
+.header__top {
   display: none; }
   @media screen and (min-width: 801px) {
-    .logo-container {
+    .header__top {
       display: block; } }
 
-.nav-container {
-  display: none; }
-  @media screen and (min-width: 801px) {
-    .nav-container {
-      display: block; } }
-
-.search-container {
-  display: none; }
-  @media screen and (min-width: 801px) {
-    .search-container {
-      display: block; } }
-
-.select-container {
-  display: none; }
-  @media screen and (min-width: 801px) {
-    .select-container {
-      display: block; } }
+@media screen and (min-width: 501px) {
+  .header__bottom {
+    padding-right: 50%;
+    box-sizing: border-box;
+    position: relative; } }
 
 .tagline {
   color: #fff;
@@ -363,6 +356,10 @@ select {
   font-size: 12px;
   letter-spacing: 0.53px;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5); }
+
+@media screen and (min-width: 501px) {
+  .hero__content {
+    margin-bottom: 38px; } }
 
 .hero__title {
   font-size: 32px;
@@ -390,6 +387,23 @@ select {
   background-image: url("../images/iphone--horizontal.png");
   background-size: cover;
   margin: 16px 0; }
+  @media screen and (min-width: 501px) {
+    .hero__image {
+      position: absolute;
+      right: 0;
+      bottom: -30px;
+      background-image: url("../images/hero-phone.png");
+      margin: 0;
+      width: 29%;
+      min-width: 200px;
+      padding-top: 0;
+      height: 337px;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: bottom center; } }
+  @media screen and (min-width: 650px) {
+    .hero__image {
+      right: 20px; } }
 
 .download-container {
   display: -webkit-box;
