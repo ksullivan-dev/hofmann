@@ -2,11 +2,11 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://use.fontawesome.com/1e2da92acd.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,400i,700" rel="stylesheet"-->
-        <script src="js/offline.js"></script>
-        <link href="stylesheets/offline-font.css" rel="stylesheets" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,400i,700" rel="stylesheet">
+        <!--script src="js/offline.js"></script>
+        <link href="stylesheets/offline-font.css" rel="stylesheets" /-->
         <link rel="stylesheet" href="stylesheets/styles.css" />
     </head>
     <body class="main-container">
@@ -260,7 +260,7 @@
             </div>
         </section>
         <section class="layout__contact">
-            <div class="width-container">
+            <div class="width-container half-padding">
                 <h2 class="section__title section__title--light">Get in Touch</h2>
                 <form class="contact__form">
                     <div class="input-wrapper">
@@ -272,21 +272,21 @@
                         <input id="contact__email" type="text" class="contact__input contact__input--email" />
                     </div>
                     <div class="input-wrapper">
-                        <label for="contact__message" class="contact__label">Message</label>
+                        <label for="contact__message" class="contact__label textarea-label">Message</label>
                         <textarea id="contact__message" type="text" class="contact__input contact__input--message"></textarea>
                     </div>
                     <div class="form__checkbox-container">
-                        <label for="contact__urgent">Most Urgent Question</label>
-                        <input id="contact__urgent" type="checkbox" checked />
+                        <input id="contact__urgent" class="checkbox__input contact__urgent--checkbox" type="checkbox" checked />
+                        <label for="contact__urgent" class="checkbox__label contact__urgent--label">Most Urgent Question</label>
                     </div>
                     <div class="form__submit-container">
                         <button type="submit" class="contact__submit btn--gold">Submit</button>
                     </div>
                 </form>
                 <div class="contact__details">
-                    <div class="contact__detail contact__detail--address">2300 W Arbutus Dr Citrus Springs, FL 34434, USA</div>
-                    <div class="contact__detail contact__detail--email"><a href="mailto:contact@hofmannui.net" class="contact__link">contact@hofmannui.net</a></div>
-                    <div class="contact__detail contact__detail--phone"><a href="tel:9527756021" class="contact__link tel">952-775-6021</a></div>
+                    <div class="contact__detail contact__detail--address"><a href="http://googlemaps.com" class="contact__link contact__link--address">2300 W Arbutus Dr Citrus Springs, FL 34434, USA</a></div>
+                    <div class="contact__detail contact__detail--email"><a href="mailto:contact@hofmannui.net" class="contact__link contact__link--email">contact@hofmannui.net</a></div>
+                    <div class="contact__detail contact__detail--phone"><a href="tel:9527756021" class="contact__link tel contact__link--phone">952-775-6021</a></div>
                 </div>
             </div>
         </section>

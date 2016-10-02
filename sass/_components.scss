@@ -1,3 +1,11 @@
+// Psuedo elements
+%before,
+%after {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
 // Buttons
 %btn {
     border-radius: 50px;
@@ -31,6 +39,16 @@
         border-color: $dark-gray;
     }
 }
+.btn--gold {
+    @extend %btn;
+    color: $darker-gray;
+    background: $gold;
+    border-color: $gold;
+    &:hover {
+        background: $dark-gold;
+        border-color: $dark-gold;
+    }
+}
 
 // Input label text
 .input-wrapper {
@@ -43,6 +61,10 @@
         left: 14px;
         transform: translate( 0, -50% );
         transition: all 0.3s;
+    }
+    .textarea-label {
+        top: 12px;
+        transform: none;
     }
     .small-display {
         font-size: 8px;
@@ -110,5 +132,50 @@ select {
          line-height: 66px;
          width: 40px;
          text-align: center;
+    }
+}
+
+.checkbox__input {
+    position: absolute;
+    clip: rect( 0, 0, 0, 0 );
+}
+
+.checkbox__label {
+    font-size: 10.75px;
+    letter-spacing: 0px;
+    line-height: 24px;
+    padding-left: 30px;
+    position: relative;
+    display: inline-block;
+    &:before {
+        @extend %before;
+        height: 14px;
+        width: 14px;
+        border: 2px solid $gold;
+        background: $white;
+        top: 50%;
+        left: 0;
+        transform: translate( 0, -50% );
+        border-radius: 4px;
+        transition: all 0.3s;
+    }
+    .checkbox__input:checked + & {
+        &:before {
+            background: $gold;
+        }
+        &:after {
+            @extend %after;
+            font-family: $font-awesome;
+            content: '\f00c';
+            height: 10px;
+            width: 10px;
+            font-size: 10px;
+            line-height: 1em;
+            color: $white;
+            text-align: center;
+            top: 50%;
+            left: 4px;
+            transform: translate( 0, -50% );
+        }
     }
 }

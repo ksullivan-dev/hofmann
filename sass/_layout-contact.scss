@@ -1,0 +1,83 @@
+.layout__contact {
+    background-image: url( '../images/contactbackground.png' );
+    background-size: auto 100%;
+    background-position: center;
+    .section__title {
+        font-size: 31.28px;
+        letter-spacing: -0.81px;
+        line-height: 40px;
+        padding: 20px 0;
+    }
+}
+.contact__form {
+    background: $darker-gray;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.50);
+    border-radius: 8px;
+    padding: 35px;
+    .input-wrapper {
+        margin-bottom: 24px;
+    }
+    .contact__input {
+        background: transparentize( $white, 0.2 );
+    }
+}
+
+.contact__input {
+    font-size: 10.75px;
+    letter-spacing: 0.1px;
+}
+.contact__input--message {
+    height: 91px;
+}
+.form__checkbox-container {
+    text-align: center;
+    color: $white;
+}
+
+.form__submit-container {
+    text-align: center;
+    margin-top: 9px;
+}
+.contact__details {
+    margin-top: 32px;
+}
+.contact__detail {
+    color: $white;
+}
+.contact__link {
+    font-size: 10.75px;
+    letter-spacing: 0px;
+    line-height: 30px;
+    padding-left: 32px;
+    position: relative;
+    display: inline-block;
+    &:before {
+        @extend %before;
+        top: 50%;
+        left: 0;
+        transform: translate( 0, -50% );
+        width: 22px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &:hover {
+        color: $light-gray;
+        text-shadow: 0 0 10px transparentize( $black, 0.7 );
+    }
+}
+.contact__link--address {
+    &:before {
+        background-image: url( '../images/pin.png' );
+    }
+}
+.contact__link--email {
+    &:before {
+        background-image: url( '../images/mail.png' );
+    }
+}
+.contact__link--phone {
+    &:before {
+        background-image: url( '../images/phone.png' );
+    }
+}
