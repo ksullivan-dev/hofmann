@@ -1,5 +1,8 @@
 .layout__client-slider {
     background: url( '../images/clientbackground.png' );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     .width-container {
         @media screen and ( min-width: 551px ) {
             padding: 0 80px;
@@ -27,12 +30,26 @@
     @media screen and ( min-width: 551px ) {
         padding: 46px 53px 0;
     }
+    @media screen and ( min-width: 981px ) {
+        padding: 110px 129px 0;
+        &:before {
+            font-size: 144px;
+            letter-spacing: 0px;
+            top: -20px;
+        }
+    }
+
 }
 .client-slide__text {
     font-size: 12px;
     color: #FFFFFF;
     letter-spacing: 0px;
     line-height: 16px;
+    @media screen and ( min-width: 981px ) {
+        font-size: 24px;
+        line-height: 36px;
+        text-shadow: 0px 0px 4px rgba(0,0,0,0.50);
+    }
 }
 
 .client {
@@ -59,6 +76,11 @@
     letter-spacing: 0px;
     line-height: 1em;
     margin: 0;
+    font-weight: bold;
+    @media screen and ( min-width: 981px ) {
+        font-size: 18px;
+        line-height: 30px;
+    }
 }
 .client__link {
     font-size: 11px;
@@ -66,6 +88,10 @@
     line-height: 1em;
     &:hover {
         color: $dark-gold;
+    }
+    @media screen and ( min-width: 981px ) {
+        font-size: 16px;
+        line-height: 30px;
     }
 }
 
@@ -101,6 +127,10 @@
             &:hover {
                 opacity: 0.7;
                 transform: translate( 0, -100% ) scale( 1.05 );
+            }
+            @media screen and ( min-width: 981px ) {
+                height: 64px;
+                width: 64px;
             }
         }
         .bx-next {
