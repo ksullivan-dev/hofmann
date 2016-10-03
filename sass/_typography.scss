@@ -8,70 +8,70 @@ body {
 
 h1 {
     font-family: $headline;
-    font-size: 64px;
-    letter-spacing: -2px;
-    line-height: 54px;
+    font-size: 32px;
+    letter-spacing: -0.5px;
+    line-height: 28px;
     margin: 10px 0;
-    @media screen and ( max-width: 980px ) {
+    @media screen and ( min-width: 551px ) {
         font-size: 36px;
         letter-spacing: -1px;
         line-height: 32px;
     }
-    @media screen and ( max-width: 550px ) {
-        font-size: 32px;
-        letter-spacing: -0.5px;
-        line-height: 28px;
+    @media screen and ( min-width: 981px ) {
+        font-size: 64px;
+        letter-spacing: -2px;
+        line-height: 54px;
     }
 }
 h2 {
     font-family: $headline;
-    font-size: 44px;
-    letter-spacing: -1.61px;
-    line-height: 48px;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    line-height: 40px;
     margin: 10px 0;
-    @media screen and ( max-width: 980px ) {
+    @media screen and ( min-width: 551px ) {
         font-size: 32px;
         letter-spacing: -0.81px;
         line-height: 40px;
     }
-    @media screen and ( max-width: 550px ) {
-        font-size: 20px;
-        letter-spacing: -0.5px;
-        line-height: 40px;
+    @media screen and ( min-width: 981px ) {
+        font-size: 44px;
+        letter-spacing: -1.61px;
+        line-height: 48px;
     }
 }
 h3 {
     font-family: $headline;
-    font-size: 32px;
-    letter-spacing: -0.81px;
-    line-height: 42px;
+    font-size: 16px;
+    letter-spacing: -0.41px;
+    line-height: 32px;
     margin: 5.33px 0;
-    @media screen and ( max-width: 980px ) {
+    @media screen and ( min-width: 551px ) {
         font-size: 24px;
         letter-spacing: -0.61px;
         line-height: 32px;
     }
-    @media screen and ( max-width: 550px ) {
-        font-size: 16px;
-        letter-spacing: -0.41px;
-        line-height: 32px;
+    @media screen and ( min-width: 981px ) {
+        font-size: 32px;
+        letter-spacing: -0.81px;
+        line-height: 42px;
     }
 }
 h4 {
     font-family: $headline;
-    font-size: 18px;
-    letter-spacing: 1px;
-    line-height: 30px;
+    font-size: 12px;
+    letter-spacing: 0px;
+    line-height: 24px;
     margin: 10px 0;
-    @media screen and ( max-width: 980px ) {
+    @media screen and ( min-width: 551px ) {
         font-size: 12px;
         letter-spacing: 0px;
         line-height: 24px;
     }
-    @media screen and ( max-width: 550px ) {
-        font-size: 12px;
-        letter-spacing: 0px;
-        line-height: 24px;
+    @media screen and ( min-width: 981px ) {
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height: 30px;
     }
 }
 
