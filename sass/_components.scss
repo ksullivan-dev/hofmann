@@ -201,3 +201,15 @@ select {
         display: block;
     }
 }
+
+// Default Animations
+.animatable {
+	transition: all 1200ms $ease-out-expo;
+	opacity: 0;
+	transform: translate( 0, 40px ) scale( 0.8 );
+	transform-origin: top center;
+	&.animated {
+		opacity: 1;
+		transform: translate( 0, 0 ) scale( 1 );
+	}
+}

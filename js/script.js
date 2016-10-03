@@ -29,16 +29,32 @@ $( document ).ready( function(){
     getDimensions();
     respSlider = $( '.slider--people' ).bxSlider( siteWidth < 550 ? singleOptions : doubleOptions );
 
-    //animateCircle();
-    //statCounter();
+    animateCircle();
+    statCounter();
     labelView();
     searchToggle();
+    animations();
 });
 
 $( window ).on( 'resize orientationchange', function() {
     getDimensions();
     responsiveSlider();
 });
+
+function animations(){
+    $('.inview-trigger').each( function(){
+        $( this ).on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+            if ( isInView ) {
+                $( this ).addClass( 'inview' ).find( '.animatable' ).each( function( idx ){
+                    var $this = $( this );
+                    setTimeout( function(){
+                        $this.addClass( 'animated' );
+                    }, 200 * idx );
+                });
+            }
+        });
+    });
+}
 
 function searchToggle(){
     $( '.js-search__toggle' ).click( function( e ){
@@ -79,17 +95,23 @@ function responsiveSlider(){
 }
 
 function animateCircle(){
-    $( '.stat-container' ).each( function( idx ){
-        var $this, circle, radius, circleLength, circlePct, dashOffset;
-        $this = $( this );
-        circle = $this.find( '.path' );
-        radius = circle.attr("r");
-        circleLength = 2 * Math.PI * radius;
-        circlePct = $this.find( '.stat' ).text().split( ',' )[0];
-        dashOffset = ( 100 - circlePct ) / 100 * circleLength;
-        setTimeout( function(){
-            circle.attr( 'style', 'stroke-dashoffset: ' + dashOffset );
-        }, 500 * idx );
+    $('.inview-trigger').each( function(){
+        $( this ).on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+            if ( isInView ) {
+                $( '.stat-container' ).each( function( idx ){
+                    var $this, circle, radius, circleLength, circlePct, dashOffset;
+                    $this = $( this );
+                    circle = $this.find( '.path' );
+                    radius = circle.attr("r");
+                    circleLength = 2 * Math.PI * radius;
+                    circlePct = $this.find( '.stat' ).text().split( ',' )[0];
+                    dashOffset = ( 100 - circlePct ) / 100 * circleLength;
+                    setTimeout( function(){
+                        circle.attr( 'style', 'stroke-dashoffset: ' + dashOffset );
+                    }, 500 * idx );
+                });
+            }
+        });
     });
 }
 
