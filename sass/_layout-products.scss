@@ -5,6 +5,10 @@
         justify-content: space-around;
         flex-wrap: wrap;
     }
+    @media screen and ( min-width: 981px ) {
+        flex-wrap: nowrap;
+        margin: 66px 0 0;
+    }
 }
 .product {
     margin: 0 auto 32px;
@@ -19,6 +23,11 @@
     @media screen and ( min-width: 700px ) {
         padding: 0;
     }
+    @media screen and ( min-width: 981px ) {
+        width: 262px;
+        flex: 0 1 auto;
+        padding: 0 14px;
+    }
 }
 .product__image {
     margin-bottom: 16px;
@@ -27,6 +36,12 @@
         &:hover {
             transform: scale( 1.05 );
         }
+        &.scale-bug {
+            transform: scale( 1.1 );
+            &:hover {
+                transform: scale( 1.2 );
+            }
+        }
     }
 }
 .product__title {
@@ -34,12 +49,21 @@
     letter-spacing: 0px;
     line-height: 16px;
     margin: 0;
+    @media screen and ( min-width: 981px ) {
+        font-size: 18px;
+        line-height: 30px;
+    }
 }
 .product__authors {
     font-size: 11px;
     letter-spacing: 0px;
     line-height: 16px;
     margin-bottom: 20px;
+    @media screen and ( min-width: 981px ) {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 32px;
+    }
 }
 .product__byline {
     display: block;
