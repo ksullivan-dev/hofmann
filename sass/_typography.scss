@@ -12,12 +12,12 @@ h1 {
     letter-spacing: -2px;
     line-height: 54px;
     margin: 10px 0;
-    @media screen and ( max-width: 780px ) {
+    @media screen and ( max-width: 980px ) {
         font-size: 36px;
         letter-spacing: -1px;
         line-height: 32px;
     }
-    @media screen and ( max-width: 500px ) {
+    @media screen and ( max-width: 550px ) {
         font-size: 32px;
         letter-spacing: -0.5px;
         line-height: 28px;
@@ -29,12 +29,12 @@ h2 {
     letter-spacing: -1.61px;
     line-height: 48px;
     margin: 10px 0;
-    @media screen and ( max-width: 780px ) {
+    @media screen and ( max-width: 980px ) {
         font-size: 32px;
         letter-spacing: -0.81px;
         line-height: 40px;
     }
-    @media screen and ( max-width: 500px ) {
+    @media screen and ( max-width: 550px ) {
         font-size: 20px;
         letter-spacing: -0.5px;
         line-height: 40px;
@@ -46,12 +46,12 @@ h3 {
     letter-spacing: -0.81px;
     line-height: 42px;
     margin: 5.33px 0;
-    @media screen and ( max-width: 780px ) {
+    @media screen and ( max-width: 980px ) {
         font-size: 24px;
         letter-spacing: -0.61px;
         line-height: 32px;
     }
-    @media screen and ( max-width: 500px ) {
+    @media screen and ( max-width: 550px ) {
         font-size: 16px;
         letter-spacing: -0.41px;
         line-height: 32px;
@@ -63,12 +63,12 @@ h4 {
     letter-spacing: 1px;
     line-height: 30px;
     margin: 10px 0;
-    @media screen and ( max-width: 780px ) {
+    @media screen and ( max-width: 980px ) {
         font-size: 12px;
         letter-spacing: 0px;
         line-height: 24px;
     }
-    @media screen and ( max-width: 500px ) {
+    @media screen and ( max-width: 550px ) {
         font-size: 12px;
         letter-spacing: 0px;
         line-height: 24px;

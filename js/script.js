@@ -27,7 +27,7 @@ $( document ).ready( function(){
     });
 
     getDimensions();
-    respSlider = $( '.slider--people' ).bxSlider( siteWidth < 500 ? singleOptions : doubleOptions );
+    respSlider = $( '.slider--people' ).bxSlider( siteWidth < 550 ? singleOptions : doubleOptions );
 
     //animateCircle();
     //statCounter();
@@ -74,7 +74,7 @@ function responsiveSlider(){
     var currentSlide = respSlider.getCurrentSlide();
     doubleOptions.startSlide = currentSlide;
     singleOptions.startSlide = currentSlide;
-    respSlider.reloadSlider( siteWidth < 500 ? singleOptions : doubleOptions );
+    respSlider.reloadSlider( siteWidth < 550 ? singleOptions : doubleOptions );
 }
 
 function animateCircle(){
