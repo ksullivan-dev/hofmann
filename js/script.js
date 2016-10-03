@@ -67,6 +67,7 @@ function getDimensions(){
     var widthAvailable = $( '.layout__people-slider' ).find( '.width-container' ).width();
     siteWidth = $( 'body' ).width();
     slideWidth = widthAvailable / 2;
+    if( slideWidth > 550 ) slideWidth = 550;
     doubleOptions.slideWidth = slideWidth;
 }
 

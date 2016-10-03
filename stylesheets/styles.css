@@ -962,6 +962,9 @@ select {
 
 .layout__people-slider .width-container {
   padding: 0 25px; }
+@media screen and (min-width: 981px) {
+  .layout__people-slider {
+    padding-top: 64px; } }
 
 .slider--people {
   display: -webkit-box;
@@ -996,6 +999,11 @@ select {
     top: 10px;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0); }
+  @media screen and (min-width: 981px) {
+    .slide--inner {
+      padding: 113px 66px 87px; }
+      .slide--inner:before {
+        top: 30px; } }
 
 .people-slide__text {
   font-size: 11px;
@@ -1003,18 +1011,29 @@ select {
   letter-spacing: 0px;
   line-height: 16px;
   margin-bottom: 26px; }
+  @media screen and (min-width: 981px) {
+    .people-slide__text {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 42px; } }
 
 .people-slide__name {
   font-size: 18px;
   color: #EBCB80;
   letter-spacing: 0px;
   font-weight: bold; }
+  @media screen and (min-width: 981px) {
+    .people-slide__name {
+      font-size: 24px; } }
 
 .people-slide__title {
   font-size: 12px;
   color: #F6F6F6;
   letter-spacing: 0px;
   line-height: 30px; }
+  @media screen and (min-width: 981px) {
+    .people-slide__title {
+      font-size: 16px; } }
 
 .people-slide__link {
   font-weight: bold; }
@@ -1041,9 +1060,26 @@ select {
     right: 48px;
     -webkit-transform: none;
             transform: none; } }
+@media screen and (min-width: 981px) {
+  .slide--people {
+    padding-bottom: 64px; }
+    .slide--people:nth-child(odd) .slide--inner {
+      margin-top: -96px; }
+    .slide--people:nth-child(odd) .people-slide__image {
+      bottom: 96px; }
+    .slide--people .people-slide__image {
+      right: 64px;
+      width: 128px; } }
+@media screen and (min-width: 981px) {
+  .layout__people-slider .bx-viewport {
+    padding-top: 96px; } }
 .layout__people-slider .bx-wrapper {
   position: relative;
   top: 10px; }
+  @media screen and (min-width: 981px) {
+    .layout__people-slider .bx-wrapper {
+      padding-top: 54px;
+      margin: 0 auto; } }
 .layout__people-slider .bx-pager {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1067,6 +1103,10 @@ select {
   .layout__people-slider .bx-pager-link:not(.active):hover {
     -webkit-transform: scale(1.15);
             transform: scale(1.15); }
+  @media screen and (min-width: 981px) {
+    .layout__people-slider .bx-pager-link {
+      height: 10px;
+      width: 10px; } }
 
 .section__title--large-screen {
   display: none; }

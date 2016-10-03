@@ -2,6 +2,9 @@
     .width-container {
         padding: 0 25px;
     }
+    @media screen and ( min-width: 981px ) {
+        padding-top: 64px;
+    }
 }
 .slider--people {
     display: flex;
@@ -33,6 +36,12 @@
         top: 10px;
         transform: translate( -50%, 0 );
     }
+    @media screen and ( min-width: 981px ){
+        padding: 113px 66px 87px;
+        &:before {
+            top: 30px;
+        }
+    }
 }
 .people-slide__text {
     font-size: 11px;
@@ -40,18 +49,29 @@
     letter-spacing: 0px;
     line-height: 16px;
     margin-bottom: 26px;
+    @media screen and ( min-width: 981px ) {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 42px;
+    }
 }
 .people-slide__name {
     font-size: 18px;
     color: $gold;
     letter-spacing: 0px;
     font-weight: bold;
+    @media screen and ( min-width: 981px ) {
+        font-size: 24px;
+    }
 }
 .people-slide__title {
     font-size: 12px;
     color: $lighter-gray;
     letter-spacing: 0px;
     line-height: 30px;
+    @media screen and ( min-width: 981px ) {
+        font-size: 16px;
+    }
 }
 .people-slide__link {
     font-weight: bold;
@@ -86,16 +106,38 @@
         }
     }
 }
+@media screen and ( min-width: 981px ) {
+    .slide--people {
+        padding-bottom: 64px;
+        &:nth-child( odd ) {
+            .slide--inner {
+                margin-top: -96px;
+            }
+            .people-slide__image {
+                bottom: 96px;
+            }
+        }
+        .people-slide__image {
+            right: 64px;
+            width: 128px;
+        }
+    }
+}
 
 // Layout specific bx overrides
 .layout__people-slider {
     .bx-viewport {
-        //padding: 0 8px;
-        //margin: 0 -8px;
+        @media screen and ( min-width: 981px ) {
+            padding-top: 96px;
+        }
     }
     .bx-wrapper {
         position: relative;
         top: 10px;
+        @media screen and ( min-width: 981px ) {
+            padding-top: 54px;
+            margin: 0 auto;
+        }
     }
     .bx-pager {
         display: flex;
@@ -118,6 +160,10 @@
         }
         &:not( .active ):hover {
             transform: scale( 1.15 );
+        }
+        @media screen and ( min-width: 981px ) {
+            height: 10px;
+            width: 10px;
         }
     }
 }
