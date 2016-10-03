@@ -2,9 +2,13 @@
     @media screen and ( min-width: 551px ){
         padding: 34px 0 48px;
     }
+    @media screen and ( min-width: 981px ) {
+        padding: 76px 0 105px;
+    }
 }
 .stats {
     margin-top: 36px;
+    margin-bottom: 8px;
     @media screen and ( min-width: 551px ) {
         display: flex;
         margin: 0;
@@ -14,6 +18,10 @@
     width: 140px;
     margin: 28px auto 0;
     text-align: center;
+    @media screen and ( min-width: 981px ) {
+        width: 262px;
+        margin: 53px auto 0;
+    }
 }
 // SVG circle with animation
 .svg-container {
@@ -25,6 +33,10 @@
     border: 1px solid $light-gray;
     border-radius: 50%;
     overflow: hidden;
+    @media screen and ( min-width: 981px ) {
+        width: 204px;
+        height: 204px;
+    }
 }
 .path {
     stroke-dashoffset: 616;
@@ -44,15 +56,22 @@
     left: 50%;
     transform: translate( -50%, -50% );
     font-family: $headline;
-    line-height: 22.39px;
 }
 .stat__large-text {
     font-size: 32px;
     letter-spacing: -0.81px;
+    @media screen and ( min-width: 981px ) {
+        font-size: 64px;
+        letter-spacing: -1.61px;
+    }
 }
 .stat__small-text {
     font-size: 16px;
     letter-spacing: -0.4px;
+    @media screen and ( min-width: 981px ) {
+        font-size: 32px;
+        letter-spacing: -0.8px;
+    }
 }
 // Stat text
 .stat__title {
@@ -60,10 +79,22 @@
     font-size: 12px;
     letter-spacing: 0.8px;
     line-height: 16px;
+    font-weight: bold;
+    margin: 15px 0 8px;
+    @media screen and ( min-width: 981px ) {
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height: 1em;
+        margin: 26px 0;
+    }
 }
 .stat__text {
     font-family: $sans;
     font-size: 11px;
     letter-spacing: 0px;
     line-height: 16px;
+    @media screen and ( min-width: 981px ) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
