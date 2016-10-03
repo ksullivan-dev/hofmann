@@ -344,6 +344,12 @@ select {
 .hidden-text {
   display: none; }
 
+.desktop-only {
+  display: none; }
+  @media screen and (min-width: 981px) {
+    .desktop-only {
+      display: block; } }
+
 .layout__header {
   background-image: url("../images/landingbackground.png");
   background-size: auto 100%;
@@ -946,6 +952,13 @@ select {
     @media screen and (min-width: 551px) {
       .layout__signup .section__subtitle {
         width: auto; } }
+  @media screen and (min-width: 981px) {
+    .layout__signup {
+      padding: 90px 0 116px; }
+      .layout__signup .section__title {
+        margin-bottom: 23px; }
+      .layout__signup .signup__input {
+        margin: 30px 0 52px; } }
 
 .layout__people-slider .width-container {
   padding: 0 25px; }

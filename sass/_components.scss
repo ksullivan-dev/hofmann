@@ -184,3 +184,11 @@ select {
 .hidden-text {
     display: none;
 }
+
+// Hidden line break
+.desktop-only {
+    display: none;
+    @media screen and ( min-width: 981px ) {
+        display: block;
+    }
+}

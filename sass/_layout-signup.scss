@@ -21,4 +21,13 @@
             width: auto;
         }
     }
+    @media screen and ( min-width: 981px ) {
+        padding: 90px 0 116px;
+        .section__title {
+            margin-bottom: 23px;
+        }
+        .signup__input {
+            margin: 30px 0 52px;
+        }
+    }
 }
