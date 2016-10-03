@@ -45,12 +45,16 @@ function animations(){
     $('.inview-trigger').each( function(){
         $( this ).on('inview', function(event, isInView, visiblePartX, visiblePartY) {
             if ( isInView ) {
-                $( this ).addClass( 'inview' ).find( '.animatable' ).each( function( idx ){
-                    var $this = $( this );
-                    setTimeout( function(){
-                        $this.addClass( 'animated' );
-                    }, 200 * idx );
-                });
+                if( $( this ).hasClass( 'layout__people-slider' ) || $( this ).hasClass( 'layout__client-slider' ) ) {
+                    $( this ).addClass( 'inview' ).find( '.animatable' ).addClass( 'animated' );
+                } else {
+                    $( this ).addClass( 'inview' ).find( '.animatable' ).each( function( idx ){
+                        var $this = $( this );
+                        setTimeout( function(){
+                            $this.addClass( 'animated' );
+                        }, 200 * idx );
+                    });
+                }
             }
         });
     });
