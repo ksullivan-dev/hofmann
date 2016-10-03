@@ -1144,7 +1144,7 @@ select {
     display: none; } }
 .layout__contact {
   background-image: url("../images/contactbackground.png");
-  background-size: auto 100%;
+  background-size: cover;
   background-position: center; }
   .layout__contact .section__title {
     font-size: 31.28px;
