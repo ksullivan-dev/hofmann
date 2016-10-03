@@ -8,6 +8,16 @@
         line-height: 40px;
         padding: 20px 0;
     }
+    @media screen and ( min-width: 981px ) {
+        padding: 68px 0 50px;
+        .section__title {
+            padding: 0;
+            font-size: 44px;
+            letter-spacing: -1.61px;
+            line-height: 48px;
+            margin-bottom: 52px;
+        }
+    }
 }
 .contact__form {
     background: $darker-gray;
@@ -22,6 +32,10 @@
     }
     .contact__input {
         background: transparentize( $white, 0.2 );
+    }
+    @media screen and ( min-width: 981px ) {
+        width: 360px;
+        padding: 46px 52px 24px;
     }
 }
 
@@ -40,12 +54,18 @@
 .form__submit-container {
     text-align: center;
     margin-top: 9px;
+    @media screen and ( min-width: 981px ) {
+        margin-top: 24px;
+    }
 }
 .contact__details {
     margin-top: 32px;
     @media screen and ( min-width: 650px ) {
         display: flex;
         justify-content: center;
+    }
+    @media screen and ( min-width: 981px ) {
+        margin-top: 40px;
     }
 }
 .contact__detail {
@@ -81,6 +101,10 @@
     &:hover {
         color: $light-gray;
         text-shadow: 0 0 10px transparentize( $black, 0.7 );
+    }
+    @media screen and ( min-width: 981px ) {
+        font-size: 18px;
+        line-height: 30px;
     }
 }
 .contact__link--address {

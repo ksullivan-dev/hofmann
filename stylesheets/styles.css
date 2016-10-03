@@ -245,6 +245,10 @@ img {
     top: 2px;
     -webkit-transform: none;
             transform: none; }
+  @media screen and (min-width: 981px) {
+    .input-wrapper {
+      font-size: 14px;
+      letter-spacing: 0.14px; } }
 
 input[type="text"],
 input[type="password"],
@@ -340,6 +344,10 @@ select {
     left: 4px;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%); }
+  @media screen and (min-width: 981px) {
+    .checkbox__label {
+      font-size: 16px;
+      line-height: 24px; } }
 
 .hidden-text {
   display: none; }
@@ -943,7 +951,8 @@ select {
   .layout__signup .signup__input {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
     margin: 20px 0 44px;
-    width: 100%; }
+    width: 100%;
+    padding: 14px 25px; }
   .layout__signup .signup__button {
     width: 100%; }
   .layout__signup .section__subtitle {
@@ -1126,6 +1135,15 @@ select {
     letter-spacing: -0.81px;
     line-height: 40px;
     padding: 20px 0; }
+  @media screen and (min-width: 981px) {
+    .layout__contact {
+      padding: 68px 0 50px; }
+      .layout__contact .section__title {
+        padding: 0;
+        font-size: 44px;
+        letter-spacing: -1.61px;
+        line-height: 48px;
+        margin-bottom: 52px; } }
 
 .contact__form {
   background: #4B4B4B;
@@ -1139,6 +1157,10 @@ select {
     margin-bottom: 24px; }
   .contact__form .contact__input {
     background: rgba(255, 255, 255, 0.8); }
+  @media screen and (min-width: 981px) {
+    .contact__form {
+      width: 360px;
+      padding: 46px 52px 24px; } }
 
 .contact__input {
   font-size: 10.75px;
@@ -1154,6 +1176,9 @@ select {
 .form__submit-container {
   text-align: center;
   margin-top: 9px; }
+  @media screen and (min-width: 981px) {
+    .form__submit-container {
+      margin-top: 24px; } }
 
 .contact__details {
   margin-top: 32px; }
@@ -1165,6 +1190,9 @@ select {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; } }
+  @media screen and (min-width: 981px) {
+    .contact__details {
+      margin-top: 40px; } }
 
 .contact__detail {
   color: #fff;
@@ -1200,6 +1228,10 @@ select {
   .contact__link:hover {
     color: #E6E6E6;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+  @media screen and (min-width: 981px) {
+    .contact__link {
+      font-size: 18px;
+      line-height: 30px; } }
 
 .contact__link--address:before {
   background-image: url("../images/pin.png"); }
