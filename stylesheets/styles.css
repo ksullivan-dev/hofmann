@@ -161,6 +161,9 @@ body {
       padding: 0 80px; }
       .width-container.half-padding {
         padding: 0 24; } }
+  @media screen and (min-width: 981px) {
+    .width-container.half-padding {
+      padding: 0 80px; } }
 
 section {
   padding: 28px 0; }
@@ -1244,6 +1247,12 @@ select {
 
 .layout__footer {
   background: #4B4B4B; }
+  @media screen and (min-width: 981px) {
+    .layout__footer {
+      padding: 28px 0; } }
+  @media screen and (min-width: 981px) {
+    .layout__footer {
+      padding: 40px 0; } }
 
 .footer-nav-container {
   display: -webkit-box;
@@ -1255,6 +1264,9 @@ select {
   @media screen and (min-width: 551px) {
     .footer-nav-container {
       margin: 0 -24px; } }
+  @media screen and (min-width: 981px) {
+    .footer-nav-container {
+      margin: 0 -15px; } }
 
 .footer-nav {
   color: #fff;
@@ -1268,6 +1280,9 @@ select {
     .footer-nav {
       width: 25%;
       padding: 0 24px; } }
+  @media screen and (min-width: 981px) {
+    .footer-nav {
+      padding: 0 15px; } }
 
 .footer-nav__title {
   font-family: "Source Sans Pro", sans-serif;
@@ -1276,7 +1291,14 @@ select {
   color: #fff;
   letter-spacing: 0.8px;
   border-bottom: 1px solid #7D7D7D;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 20px;
+  margin-top: 0;
+  padding-bottom: 10px; }
+  @media screen and (min-width: 981px) {
+    .footer-nav__title {
+      font-size: 18px;
+      letter-spacing: 1px; } }
 
 .footer-nav__item {
   color: #fff;
@@ -1284,6 +1306,12 @@ select {
   letter-spacing: 0px;
   line-height: 12.8px;
   margin-bottom: 11px; }
+  .footer-nav__item:hover {
+    color: #E6E6E6; }
+  @media screen and (min-width: 981px) {
+    .footer-nav__item {
+      font-size: 16px;
+      line-height: 24px; } }
 
 .footer__bottom {
   border-top: 1px solid #7D7D7D;
@@ -1315,6 +1343,11 @@ select {
           flex: 0 0 auto;
   font-size: 20px;
   color: #EBCB80; }
+  .social__item:hover {
+    color: #D1B471; }
+  @media screen and (min-width: 981px) {
+    .social__item {
+      font-size: 24px; } }
 
 .social-container {
   -webkit-box-flex: 1;
@@ -1358,6 +1391,10 @@ select {
               flex: 0 0 auto;
       margin: 31px 0 0;
       text-align: left; } }
+  @media screen and (min-width: 981px) {
+    .copyright-container {
+      font-size: 16px;
+      line-height: 24px; } }
 
 .copyright {
   margin-bottom: 3px; }

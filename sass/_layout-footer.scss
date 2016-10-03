@@ -1,5 +1,11 @@
 .layout__footer {
     background: $darker-gray;
+    @media screen and ( min-width: 981px ) {
+        padding: 28px 0;
+    }
+    @media screen and ( min-width: 981px ) {
+        padding: 40px 0;
+    }
 }
 .footer-nav-container {
     display: flex;
@@ -7,6 +13,9 @@
     margin: 0 -15px;
     @media screen and ( min-width: 551px ) {
         margin: 0 -24px;
+    }
+    @media screen and ( min-width: 981px ) {
+        margin: 0 -15px;
     }
 }
 .footer-nav {
@@ -19,6 +28,9 @@
         width: 25%;
         padding: 0 24px;
     }
+    @media screen and ( min-width: 981px ) {
+        padding: 0 15px;
+    }
 }
 .footer-nav__title {
     font-family: $sans;
@@ -28,6 +40,13 @@
     letter-spacing: 0.8px;
     border-bottom: 1px solid $dark-gray;
     text-transform: uppercase;
+    line-height: 20px;
+    margin-top: 0;
+    padding-bottom: 10px;
+    @media screen and ( min-width: 981px ) {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
 }
 .footer-nav__item {
     color: $white;
@@ -35,6 +54,13 @@
     letter-spacing: 0px;
     line-height: 12.8px;
     margin-bottom: 11px;
+    &:hover {
+        color: $light-gray;
+    }
+    @media screen and ( min-width: 981px ) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 .footer__bottom {
     border-top: 1px solid $dark-gray;
@@ -54,7 +80,13 @@
     padding: 0 10px;
     flex: 0 0 auto;
     font-size: 20px;
-    color: $gold
+    color: $gold;
+    &:hover {
+        color: $dark-gold;
+    }
+    @media screen and ( min-width: 981px ) {
+        font-size: 24px;
+    }
 }
 .social-container {
     flex: 1 0 100%;
@@ -81,6 +113,10 @@
         flex: 0 0 auto;
         margin: 31px 0 0;
         text-align: left;
+    }
+    @media screen and ( min-width: 981px ) {
+        font-size: 16px;
+        line-height: 24px;
     }
 }
 .copyright {
